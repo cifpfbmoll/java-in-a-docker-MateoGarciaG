@@ -4,7 +4,7 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotEquals;
 import static org.junit.Assert.assertTrue;
 
-import org.foobarspam.KataRomanNumerals.NumeroRomano;
+import org.pingpong.romansgohome.domain.NumeroRomano;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
