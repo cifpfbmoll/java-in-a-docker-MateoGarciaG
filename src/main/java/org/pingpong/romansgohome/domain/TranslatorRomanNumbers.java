@@ -32,6 +32,10 @@ public class TranslatorRomanNumbers {
         return this.regexDictionary;
     }
 
+    public String getRomanNumber() {
+        return this.romanNumber;
+    }
+
     public void setDecimalNumber(short decimalNumber) {
         this.decimalNumber = decimalNumber;
     }
@@ -84,7 +88,6 @@ public class TranslatorRomanNumbers {
     public short toDecimal() {
 
         getregexDictionary().getAllRegex()
-                .stream()
                 .forEach(regex -> {
                     /*
                     * Get Regex Matcher Compile, ready to use and search
