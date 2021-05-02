@@ -2,7 +2,7 @@ package org.pingpong.romansgohome;
 
 import org.pingpong.romansgohome.domain.TranslatorRomanNumbers;
 
-import static org.assertj.core.api.Assertions.assertThat;
+//import static org.assertj.core.api.Assertions.assertThat;
 
 /**
  * Hello world!
@@ -20,6 +20,8 @@ public class App
         TranslatorRomanNumbers romanNumber = new TranslatorRomanNumbers(test);
         //romanNumber.initRegexDictionary();
         romanNumber.addRegex("grupoSumatorio", "((?<!C)[DM]|(?<!X)[LC](?![DM]))|((?<!I)[VX](?![LC])|I(?![VX]))");
+        // Para verlo de una mejor forma:
+        // ( (?<!C)[DM] | (?<!X)[LC](?![DM]) ) | ( (?<!I)[VX](?![LC]) | I(?![VX]) )
         romanNumber.addRegex("grupoSustractivo", "(C[DM])|(X[LC])|(I[VX])");
         //romanNumber.initRegexDictionary();
         //assertThat(romanNumber.toDecimal()).isEqualTo((short) 439);
