@@ -1,6 +1,7 @@
 # Romans-Go-Home with Docker
 Romans-Go-Home Kata Project consist of write a program that transforms numbers in Roman notation into Indo-Arabic notation. This kata  is solved by using regular expressions and enumerated types. This Kata is part of "Panel de Actividades" from Programación Subject
 
+Docker is used in this project to generate a Image to upload to DockerHub and create a Container from this images. Where this images have the main things like maven and OpenJDK to execute and generated a JAR file.
 
 [![status application](https://img.shields.io/badge/status-stable-brightgreen)](URL_Proyecto)
 
