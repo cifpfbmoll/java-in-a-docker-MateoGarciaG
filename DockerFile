@@ -1,0 +1,20 @@
+
+FROM maven:3.6.3-openjdk-11-slim AS build
+
+
+COPY . /usr/src/app
+
+RUN mvn -e -f /usr/src/app/pom.xml clean package
+
+FROM openjdk:11.0-jre-slim-buster
+
+LABEL "org.pingpong.romansgohome"="Romans Go Home" \
+        version="1.0-SNAPSHOT" \
+        description="Romans Go Home in Java With Docker" \ 
+        maintainer="mgarciag@cifpfbmoll.eu"
+
+WORKDIR $HOME/app 
+
+COPY --from=build /usr/src/app/target/*.jar ./romansgohome-1.0-SNAPSHOT.jar
+
+ENTRYPOINT ["java", "-jar", "romansgohome-1.0-SNAPSHOT.jar"]
