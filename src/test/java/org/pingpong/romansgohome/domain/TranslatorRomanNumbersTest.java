@@ -11,10 +11,6 @@ import org.junit.Test;
 
 import java.util.*;
 
-/**
- * @author @dfleta GitHub is the author of this test cases which according to Romans Go Home kata we can use to test our classes
- */
-
 public class TranslatorRomanNumbersTest {
 
     private TranslatorRomanNumbers translator = null;
